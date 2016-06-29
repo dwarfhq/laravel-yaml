@@ -1,5 +1,9 @@
 # Laravel YAML
-YAML responder for Laravel.
+
+[![Packagist](https://img.shields.io/packagist/v/symfony/symfony.svg?maxAge=2592000)](https://packagist.org/packages/dugajean/laravel-yaml) 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dugajean/laravel-yaml/master/LICENSE) 
+[![GitHub issues](https://img.shields.io/github/issues/dugajean/laravel-yaml.svg)](https://github.com/dugajean/laravel-yaml/issues) 
+[![Packagist](https://img.shields.io/packagist/dt/doctrine/orm.svg?maxAge=2592000)](https://packagist.org/packages/dugajean/laravel-yaml)
 
 This package will allow your application to determine whether the request wants a YAML response and then also respond with YAML.
 
