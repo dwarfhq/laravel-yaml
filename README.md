@@ -14,6 +14,7 @@ Now you should proceed with registereing the service provider, like so:
 
 ```php
 // config/app.php
+
 'providers' => [
     ...
     Dugajean\Yaml\YamlServiceProvider::class,
@@ -32,9 +33,9 @@ use Illuminate\Http\Request;
 Route::get('/some/route', function (Request $request) {
 	// Was this a YAML request?
 	if ($request->wantsYaml()) {
+		// Then let's respond with YAML!
 		response()->yaml(['This is my YAML response!']);
 	}
-}
 });
 ```
 
