@@ -1,0 +1,43 @@
+{
+    "name": "dugajean/laravel-yaml",
+    "description": "YAML parser for Laravel.",
+    "keywords": [
+        "yaml",
+        "laravel-yaml",
+        "laravel",
+        "api",
+        "response",
+        "response-type"
+    ],
+    "homepage": "https://github.com/dugajean/laravel-yaml",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dukagjin Surdulli",
+            "email": "dukagjin.surdulli@gmail.com",
+            "homepage": "https://dukagj.in",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.9",
+        "symfony/yaml": "^3.1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "^4.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dugajean\\Yaml\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dugajean\\Yaml\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
