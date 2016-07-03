@@ -13,7 +13,7 @@ You can pull in the package via composer:
 $ composer require dugajean/laravel-yaml
 ```
 
-Now you should proceed with registereing the service provider, like so:
+Now you should proceed with registering the service provider, like so:
 
 ```php
 // config/app.php

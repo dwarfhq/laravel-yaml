@@ -13,12 +13,13 @@ class YamlServiceProvider extends ServiceProvider
      */
     public function boot(ResponseFactory $factory, Request $request)
     {
-        $factory->macro('yaml', function ($value) use ($factory) {
-            return $factory->make(strtoupper($value));
+        $factory->macro('yaml', function ($value, $status = 200, array $headers = []) use ($factory) {
+            YamlResponse::prepareHeaders($headers);
+            return $factory->make(YamlResponse::dump($value), $status, $headers);
         });
 
-        $request->macro('wantsYaml', function ($value) use ($request) {
-            return $request->accepts(['/x-yaml', '+x-yaml']);
+        $request->macro('wantsYaml', function () {
+            return (new YamlRequest)->wantsYaml();
         });
     }
 
