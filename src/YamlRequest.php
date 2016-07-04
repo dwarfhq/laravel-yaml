@@ -2,29 +2,25 @@
 
 namespace Dugajean\Yaml;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
-class YamlRequest extends Request
+class YamlRequest
 {
     /**
      * Acceptable content type for YAML.
      * @var array
      */
-    protected $contentTypeData = ['/x-yaml', '+x-yaml'];
+    protected static $contentTypeData = ['/x-yaml', '+x-yaml'];
 
     /**
      * Determine if the current request is asking for YAML in return.
      *
      * @return bool
      */
-    public function wantsYaml()
+    public static function wantsYaml(Request $request)
     {
-        $acceptable = $this->getAcceptableContentTypes();
-
-        dd($acceptable);
-
-        return isset($acceptable[0]) && Str::contains($acceptable[0], $this->contentTypeData);
+        return $request->accepts(YamlResponse::CONTENT_TYPE);
     }
 
     /**
@@ -32,8 +28,8 @@ class YamlRequest extends Request
      *
      * @return bool
      */
-    public function isYaml()
+    public static function isYaml(Request $request)
     {
-        return Str::contains($this->header('CONTENT_TYPE'), $this->contentTypeData);
+        return Str::contains($request->header('CONTENT_TYPE'), self::$contentTypeData);
     }
 }
