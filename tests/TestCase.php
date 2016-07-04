@@ -24,7 +24,7 @@ abstract class TestCase extends Orchestra
 
         $this->request = Request::capture();
 
-        $this->request->headers->set('Accept', YamlResponse::CONTENT_TYPE);
+        $this->request->headers->set('CONTENT_TYPE', YamlResponse::CONTENT_TYPE);
     }
 
     /**
@@ -35,15 +35,5 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [YamlServiceProvider::class];
-    }
-
-    /**
-     * Sets YAML content type header
-     * 
-     * @return void
-     */
-    protected function setYamlHeader()
-    {
-        $this->request->headers->set('Content-Type', YamlResponse::CONTENT_TYPE);
     }
 }

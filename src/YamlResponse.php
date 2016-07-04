@@ -6,7 +6,7 @@ use Symfony\Component\Yaml\Yaml as BaseYaml;
 
 class YamlResponse extends BaseYaml
 {
-    const INLINE_YAML    = 1;
+    const INLINE_YAML    = 0;
     const MULTILINE_YAML = 2;
     const INDENT_SIZE    = 4;
     const CONTENT_TYPE   = 'application/x-yaml';
