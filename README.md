@@ -13,7 +13,7 @@ You can pull in the package via composer:
 $ composer require dugajean/laravel-yaml
 ```
 
-Now you should proceed with registering the service provider, like so:
+For Laravel 5.4 and lower, add the following service provider to your ``config/app.php``:
 
 ```php
 // config/app.php
@@ -23,6 +23,8 @@ Now you should proceed with registering the service provider, like so:
     Dugajean\Yaml\YamlServiceProvider::class,
 ];
 ```
+
+For Laravel 5.5 and greater, the package will auto register the provider for you.
 
 ## Usage
 
