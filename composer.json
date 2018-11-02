@@ -37,6 +37,13 @@
             "Dugajean\\Yaml\\Tests\\": "tests"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dugajean\\Yaml\\YamlServiceProvider"
+            ]
+        }
+    },
     "scripts": {
         "test": "phpunit"
     }
