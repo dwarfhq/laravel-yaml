@@ -11,7 +11,7 @@ class YamlResponse extends BaseYaml
     const INDENT_SIZE    = 4;
     const CONTENT_TYPE   = 'application/x-yaml';
 
-    public static function dump($array, $inline = self::MULTILINE_YAML, $indent = self::INDENT_SIZE, $flags = 0)
+    public static function dump($array, $inline = self::MULTILINE_YAML, $indent = self::INDENT_SIZE, $flags = 0): string
     {
         return parent::dump($array, $inline, $indent, $flags);
     }

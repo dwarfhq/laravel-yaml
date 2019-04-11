@@ -11,8 +11,8 @@ class RequestTest extends TestCase
     }
 
     /** @test */
-    public function it_should_return_a_bool_if_page_is_yaml_or_not()
-    {
-        // $this->assertTrue($this->request->isYaml());
-    }
+    // public function it_should_return_a_bool_if_page_is_yaml_or_not()
+    // {
+    //     $this->assertTrue($this->request->isYaml());
+    // }
 }
